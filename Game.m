@@ -27,6 +27,7 @@
     tunnelTop.hidden = YES;
     tunnelBottom.hidden = YES;
     bird.hidden = YES;
+    scoreLabel.hidden = NO;
     
 }
 
@@ -42,6 +43,7 @@
     tunnelBottom.hidden = NO;
     tunnelTop.hidden = NO;
     startGame.hidden = YES;
+    scoreLabel.hidden = YES;
     
     birdMovement = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(birdMoving) userInfo:nil repeats:YES];
     
@@ -84,23 +86,13 @@
 
 -(void)placeTunnels{                                                        //listen to video 13.39mins
     
-    randomTopTunnelPosition = arc4random() % 350;
-    randomTopTunnelPosition = - randomTopTunnelPosition - 228;
-    randomBottomTunnelPosition = randomTopTunnelPosition + 655;
+    randomTopTunnelPosition = arc4random() % 301; //501
+    randomTopTunnelPosition = randomTopTunnelPosition - 150;
+    randomBottomTunnelPosition = randomTopTunnelPosition + 600; //636
     
-    tunnelTop.center = CGPointMake(360 + 25, randomTopTunnelPosition);
-    tunnelBottom.center = CGPointMake(360 + 25, randomBottomTunnelPosition);
+    tunnelTop.center = CGPointMake(self.view.frame.size.width + 25, randomTopTunnelPosition);
+    tunnelBottom.center = CGPointMake(self.view.frame.size.width + 25, randomBottomTunnelPosition);
     
-//    tunnelBottom.center = CGPointMake(tunnelTop.center.x, tunnelTop.center.y + 250);
-
-
-//    RandomTopTunnelPosition = arc4random() %350;
-//    RandomTopTunnelPosition = RandomTopTunnelPosition - 228;
-//    RandomBottomTunnelPosition = RandomTopTunnelPosition + 655;
-//    
-//    TunnelTop.center = CGPointMake(340, RandomTopTunnelPosition);
-//    TunnelBottom.center = CGPointMake(340, RandomBottomTunnelPosition);
-
 }
 
 -(void)birdMoving{
@@ -123,7 +115,7 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    birdFlight = 30;
+    birdFlight = 20; //30
     
 }
 
