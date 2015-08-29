@@ -40,7 +40,7 @@
                                     <mask key="constraints">
                                         <include reference="3AB-Pp-J9n"/>
                                         <exclude reference="Tda-Ae-NfQ"/>
-                                        <include reference="zaG-7e-pz0"/>
+                                        <exclude reference="zaG-7e-pz0"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -101,14 +101,18 @@
                         <constraints>
                             <constraint firstItem="VFm-MK-bMV" firstAttribute="top" secondItem="wNw-51-NVQ" secondAttribute="bottom" constant="42" id="6Se-7J-wA0"/>
                             <constraint firstItem="cKw-ac-JDe" firstAttribute="centerX" secondItem="wNw-51-NVQ" secondAttribute="centerX" id="70y-yK-ibr"/>
-                            <constraint firstItem="VFm-MK-bMV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="61" id="8Dh-o0-X72"/>
-                            <constraint firstAttribute="trailing" secondItem="VFm-MK-bMV" secondAttribute="trailing" constant="61" id="Apg-EB-bCL"/>
+                            <constraint firstItem="VFm-MK-bMV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="61" id="8Dh-o0-X72">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="wNw-51-NVQ" firstAttribute="centerX" secondItem="VFm-MK-bMV" secondAttribute="centerX" constant="0.5" id="DNM-3J-sM8">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="cKw-ac-JDe" secondAttribute="centerY" id="MqK-qu-VqM"/>
                             <constraint firstItem="wNw-51-NVQ" firstAttribute="top" secondItem="cKw-ac-JDe" secondAttribute="bottom" constant="45" id="NZJ-nb-jxk"/>
                             <constraint firstItem="cKw-ac-JDe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="87" id="eNx-5D-Nk2">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="VFm-MK-bMV" secondAttribute="trailing" constant="102" id="tLH-PY-VEY">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                         </constraints>
@@ -119,14 +123,14 @@
                                 <exclude reference="cKw-ac-JDe"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6Se-7J-wA0"/>
-                                <exclude reference="8Dh-o0-X72"/>
-                                <exclude reference="Apg-EB-bCL"/>
                                 <exclude reference="70y-yK-ibr"/>
                                 <exclude reference="MqK-qu-VqM"/>
                                 <exclude reference="eNx-5D-Nk2"/>
                                 <exclude reference="DNM-3J-sM8"/>
                                 <exclude reference="NZJ-nb-jxk"/>
+                                <exclude reference="6Se-7J-wA0"/>
+                                <exclude reference="8Dh-o0-X72"/>
+                                <exclude reference="tLH-PY-VEY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -136,14 +140,14 @@
                                 <include reference="cKw-ac-JDe"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="6Se-7J-wA0"/>
-                                <include reference="8Dh-o0-X72"/>
-                                <include reference="Apg-EB-bCL"/>
                                 <exclude reference="70y-yK-ibr"/>
                                 <include reference="MqK-qu-VqM"/>
                                 <include reference="eNx-5D-Nk2"/>
                                 <include reference="DNM-3J-sM8"/>
                                 <include reference="NZJ-nb-jxk"/>
+                                <include reference="6Se-7J-wA0"/>
+                                <include reference="8Dh-o0-X72"/>
+                                <include reference="tLH-PY-VEY"/>
                             </mask>
                         </variation>
                     </view>
@@ -192,27 +196,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BirdUp.png" translatesAutoresizingMaskIntoConstraints="NO" id="W08-4u-OEE">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="zpa-q1-k6p" userLabel="tunnelTop">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="W6p-pr-bOy"/>
-                                    <constraint firstAttribute="height" constant="500" id="rvX-2n-mP5">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="400"/>
-                                    </constraint>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="W6p-pr-bOy"/>
-                                        <exclude reference="rvX-2n-mP5"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="W6p-pr-bOy"/>
-                                        <include reference="rvX-2n-mP5"/>
-                                    </mask>
-                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tR5-zK-huE">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -296,7 +279,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="CJF-GU-95a"/>
                                     <constraint firstAttribute="height" constant="500" id="RPA-Dj-YCZ">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="400"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="380"/>
                                     </constraint>
                                 </constraints>
                                 <variation key="default">
@@ -309,6 +292,27 @@
                                     <mask key="constraints">
                                         <include reference="CJF-GU-95a"/>
                                         <include reference="RPA-Dj-YCZ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="zpa-q1-k6p" userLabel="tunnelTop">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="W6p-pr-bOy"/>
+                                    <constraint firstAttribute="height" constant="500" id="rvX-2n-mP5">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="380"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="W6p-pr-bOy"/>
+                                        <exclude reference="rvX-2n-mP5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="W6p-pr-bOy"/>
+                                        <include reference="rvX-2n-mP5"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -365,12 +369,12 @@
                                 <exclude reference="I1u-bo-WPI"/>
                                 <exclude reference="HYy-Fg-Tu4"/>
                                 <exclude reference="W08-4u-OEE"/>
-                                <exclude reference="zpa-q1-k6p"/>
                                 <exclude reference="tR5-zK-huE"/>
                                 <exclude reference="eLK-NC-40W"/>
                                 <exclude reference="RZX-DR-lxo"/>
                                 <exclude reference="BVO-x0-igt"/>
                                 <exclude reference="Ocv-vg-DSf"/>
+                                <exclude reference="zpa-q1-k6p"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="bUI-lZ-076"/>
@@ -406,12 +410,12 @@
                                 <include reference="I1u-bo-WPI"/>
                                 <include reference="HYy-Fg-Tu4"/>
                                 <include reference="W08-4u-OEE"/>
-                                <include reference="zpa-q1-k6p"/>
                                 <include reference="tR5-zK-huE"/>
                                 <include reference="eLK-NC-40W"/>
                                 <include reference="RZX-DR-lxo"/>
                                 <include reference="BVO-x0-igt"/>
                                 <include reference="Ocv-vg-DSf"/>
+                                <include reference="zpa-q1-k6p"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="bUI-lZ-076"/>
